@@ -2,6 +2,18 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  let said;
+  if(true){
+    said = "Said Zakriyev"
+  }
+  else{
+    said = <MyButton/>
+  }
+
+  function handleClick(){
+    alert("You clicked mei!!ii");
+  }
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -17,7 +29,10 @@ export default function Home() {
           <li>
             Get started by editing <code>app/page.js</code>.
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>Hallo ik ben {said}</li>
+          <li>Noxfit is een heel goeie merk.</li>
+          <li><MyButton onClick={handleClick}></MyButton></li>
+          <li><button>hey</button></li>
         </ol>
 
         <div className={styles.ctas}>
@@ -44,6 +59,15 @@ export default function Home() {
           >
             Read our docs
           </a>
+        </div>
+        <div className={styles.ctas}>
+          <p>made by Said Zakriyev</p>
+        </div>
+        <div className={styles.ctas}>
+          <h2>TIC TAC TOE</h2>
+        </div>
+        <div className={styles.ctas}>
+          <TicTacToe></TicTacToe>
         </div>
       </main>
       <footer className={styles.footer}>
@@ -90,6 +114,36 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
+    </div>
+  );
+}
+
+function MyButton({onClick}) {
+  return (
+    <button>
+      Click me
+    </button>
+  );
+}
+
+function TicTacToe(){
+  return (
+    <div className={styles.board}>
+      <div className={styles.boardrow}>
+      <button className={styles.square}>1</button>
+      <button className={styles.square}>2</button>
+      <button className={styles.square}>3</button>
+    </div>
+    <div className={styles.boardrow}>
+      <button className={styles.square}>4</button>
+      <button className={styles.square}>5</button>
+      <button className={styles.square}>6</button>
+    </div>
+    <div className={styles.boardrow}>
+      <button className={styles.square}>7</button>
+      <button className={styles.square}>8</button>
+      <button className={styles.square}>9</button>
+    </div>
     </div>
   );
 }
