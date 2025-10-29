@@ -108,6 +108,8 @@ a.secondary {
 }
 
 .square {
+  width: 45px;
+  height: 45px;
   font-size: 32px;
   color: #000000;
   background-color: white;
@@ -115,8 +117,38 @@ a.secondary {
   border-radius: 5px;
 }
 
-.boardrow {
-  
+.boardRow {
+  display: flex;
+}
+
+.board {
+
+}
+
+.status {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.gameBoard {
+
+}
+
+.gameInfo {
+  margin-left: 25px;
+}
+
+.gameInfoButton {
+  color: black;
+  background-color: white;
+  padding: 3px;
+  border-radius: 5px;
 }
 
 /* Enable hover only on non-touch devices */
